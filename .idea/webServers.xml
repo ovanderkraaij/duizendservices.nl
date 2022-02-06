@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="92e0a71f-edbe-4731-b61f-543c8fd228ca" name="aws" url="http://services.1000rovers.nl">
+        <fileTransfer rootFolder="/var/www/services.1000rovers.com" accessType="SFTP" host="aws" port="22" sshConfigId="978fc03b-3990-4508-9581-a5b10aebad5a" sshConfig="ubuntu@aws:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
