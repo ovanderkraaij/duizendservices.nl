@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig host="aws" id="978fc03b-3990-4508-9581-a5b10aebad5a" keyPath="$USER_HOME$/.ssh/aws.pem" port="22" nameFormat="DESCRIPTIVE" username="ubuntu" />
+      <sshConfig host="aws" id="51374c7b-656f-4d84-b395-d0f76c4b6781" keyPath="$USER_HOME$/.ssh/aws.pem" port="22" nameFormat="DESCRIPTIVE" username="ubuntu" />
     </configs>
   </component>
 </project>
