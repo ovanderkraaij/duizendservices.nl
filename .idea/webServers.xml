@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="92e0a71f-edbe-4731-b61f-543c8fd228ca" name="aws" url="http://services.1000rovers.nl">
-        <fileTransfer rootFolder="/var/www/services.1000rovers.com" accessType="SFTP" host="aws" port="22" sshConfigId="51374c7b-656f-4d84-b395-d0f76c4b6781" sshConfig="ubuntu@aws:22 key" keyPair="true">
+      <webServer id="d2ed1f67-bf69-44a1-942e-18405b582fe5" name="aws" url="http://services.1000rovers.nl">
+        <fileTransfer accessType="SFTP" host="aws" port="22" sshConfigId="51374c7b-656f-4d84-b395-d0f76c4b6781" sshConfig="ubuntu@aws:22 key" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

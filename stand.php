@@ -1,7 +1,5 @@
 <?php
 
-/* Template Name: Stand */
-
 require_once('library/open-database.php');
 require_once('library/nbo.php');
 require_once('library/bean.php');
@@ -9,7 +7,6 @@ require_once('library/constants.php');
 require_once('library/util.php');
 
 $repository = new Repository();
-$cacheKey = CACHE_KEY_RANKING;
 
 //Paginaspecifieke toewijzingen
 $currentLeaders = array();
@@ -124,6 +121,9 @@ if (!is_null($startSolutions) && !empty($startClassifications)) {
         $curBean = new ClassificationBean($curClassification, $league->getType());
         $curUserId = $curClassification->getUserId();
         $curBean->id = $curUserId;
+        $curBean->prizes = $league->getTrophies($curUserId, $season->getId(), $thisSeason->getId());
+        $user = new User($curUserId);
+        $curBean->name = $user->getName();
         if ($curClassification->getSeed() == 1) {
             $leader = new User($curUserId);
             $currentLeaders[] = $leader->getUserName();
@@ -183,12 +183,5 @@ if (!is_null($startSolutions) && !empty($startClassifications)) {
         $itClassifications->next();
     }
 }
-foreach ($curBeans as $curBean) {
-    echo $curBean->seed . " - ";
-    echo $curBean->gray . " - ";
-    echo $curBean->seed . " - ";
-    echo $curBean->id . " <br/> ";
-
-}
-
-
+echo json_encode($curBeans);
+exit();
